@@ -1,11 +1,16 @@
+import { Route, Routes } from "react-router-dom"
+import Layout from "./components/Layout"
+import Home from "./pages/Home"
 
 function App() {
 
 
   return (
-    <div>
-      <div className="w-full h-full bg-pink-300 text-3xl text-center mx-auto">HELLO</div>
-    </div>
+    <Routes>
+        <Route path="/" element={<Layout />}>
+            <Route index element={<Home/>}/>
+        </Route>
+    </Routes>
   )
 }
 
